@@ -1,9 +1,17 @@
+<!-- Dit is onze website, onze website is opgebouwd en verschillende onderdelen, het eerste onderdeel is de navigatie.
+    Deze navigatie staat aangegeven in de CSS file waaronder alle styling voor het header onderdeel is geplaatst. Voor elk onderdeel staat er boven aan de code onderdelen een comment die aangeeft waar je jezelf in de code bevindt.
+    Zo kan jij jezelf makkelijker en sneller begeven naar de gezochte info in de code.
+    Elk onderdeel staat aangegeven op volgorde van waarop deze is ontwikkeld.
+    de volgende onderdelen zijn: Header, Info, Footer.
+    Om het overzichtelijk te houden hebben we de media queries voor de responsive webdesign in een aparte CSS file geplaatst.
+    Zie hiervoor responsive.css-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="Responsive.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +19,19 @@
 </head>
 
 <body>
-    <div id="left-screen">
-        <img id="menu" src="Menubutton.png" alt="menu-button">
+    
+    
+    <div id="left-screen">    
         <div id="navigatie-container">
-            <div class="navigatie" id="about"><strong><a href="#headline1" style="text-decoration: none;"><span></span>About</a></strong></div>
-            <div class="navigatie" id="opleidingen"><strong><a href="#headline2" style="text-decoration: none;"><span></span>Opleidingen</a></strong></div>
-            <div class="navigatie" id="skills"><strong><a href="#headline3" style="text-decoration: none;"><span></span>Skills</a></strong></div>
-            <div class="navigatie" id="projecten"><strong><a href="#headline4" style="text-decoration: none;"><span></span>Projecten</a></strong></div>
-            <div class="navigatie" id="werk-ervaring"><strong><a href="#headline5" style="text-decoration: none;"><span></span>Werkervaring</a></strong></div>
-            <div class="navigatie" id="werk-ervaring"><strong><a href="#headline6" style="text-decoration: none;"><span></span>Contact</a></strong></div>
-            
+            <div class="navigatie" id="about"><strong><a id="aboutLink" href="#headline1" style="text-decoration: none;"><span></span>Over mij</a></strong></div>
+            <div class="navigatie" id="opleidingen"><strong><a id="opleidingenLink" href="#headline2" style="text-decoration: none;"><span></span>Opleidingen</a></strong></div>
+            <div class="navigatie" id="projecten"><strong><a id="projectenLink" href="#headline3" style="text-decoration: none;"><span></span>Projecten</a></strong></div>
+            <div class="navigatie" id="skills"><strong><a id="skillsLink" href="#headline4" style="text-decoration: none;"><span></span>Skills</a></strong></div>
+            <div class="navigatie" id="werkervaring"><strong><a id="werkervaringLink" href="#headline5" style="text-decoration: none;"><span></span>Werkervaring</a></strong></div>
+            <div class="navigatie" id="contact"><strong><a id="contactLink" href="#headline6" style="text-decoration: none;"><span></span>Contact</a></strong></div>
         </div>
     </div>
+
     <div id="header">
         <div id="profile-picture">
             <img id="profile" src="Cheeto.jpg" alt="Profile Picture">
@@ -30,62 +39,74 @@
         <h1 id="Nametext">Portfolio</h1>
         <h2>Cheeto</h2>
     </div>
+
     <div id="info-container">
         <div class="info-box" id="headline1">
-            <h1 class="Headline">About</h1>
+            <h1 class="Headline">Over mij</h1>
             <p>
-
+                hIk ben Thijs Goedemans. Ik ben 17 jaar oud en ik studeer software development bij ROC van Flevoland.
             </p>
         </div>
-        <div class="info-box"id="headline2">
+        <div class="info-box" id="headline2">
             <h1 class="Headline">Opleiding</h1>
             <p>
-
+                Ik studeer nu bij het ROC van Flevoland software development
+                <br>
+               
+                En ik ben afgestudeerd bij Baken Stad College 
             </p>
         </div>
-        <div class="info-box"id="headline3">
+        <div class="info-box" id="headline3">
             <h1 class="Headline">Projecten</h1>
             <p>
-
+                
             </p>
         </div>
-        <div class="info-box"id="headline4">
-            <h1 class="Headline">Skills</h1>
-            <p>
-
-            </p>
+        <div class="info-box " id="headline4">
+            <div id="skill-container">
+                <div class="Head-container">
+                    <h1 class="Headline">Skills</h1>
+                </div>
+                <div class="skillName"></div>
+                <div class="skillBar-container">
+                    <div class="skillBar skillBar-1">
+                        <div class="skillDone skillDone-1"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="info-box"id="headline5">
+
+        <div class="info-box" id="headline5">
             <h1 class="Headline">Werkervaring</h1>
             <p>
 
             </p>
         </div>
-        <div class="info-box" id="footer-container">
+        <div class="info-box" id="headline6">
             <div id="footer">
                 <div id="contact-container">
-                    <div class="contact contact-1"id="headline6">
+                    <div class="contact contact-1">
                         <h1 class="Headline">Contact</h1>
                     </div>
                     <div class="contact">
-                        <a href=""><img id="mailImg" src="email.png" alt="" class="contactImg"></a>
-                        <p>email@email.com</p>
+                        <a ><img id="mailImg" src="email.png" alt="" class="contactImg"></a>
+                        <p>Thijsgoedemans@gmail.com</p>
                     </div>
                     <div class="contact">
-                        <a href=""><img id="instragramImg" src="instagram.png" alt="" class="contactImg"></a>
-                        <p>@instragram</p>
+                        <a href="https://www.instagram.com/goedies04/"><img id="instragramImg" src="instagram.png" alt="" class="contactImg"></a>
+                        <p>@Goedies04</p>
                     </div>
                     <div class="contact">
-                        <a href=""><img id="discordImg" src="discord.png" alt="" class="contactImg"></a>
-                        <p>discord#1234</p>
+                        <a href="https://discordapp.com/users/442992829120118795/"><img id="discordImg" src="discord.png" alt="" class="contactImg"></a>
+                        <p>Goedies04#4469</p>
                     </div>
                     <div class="contact">
                         <a href=""><img id="TwitchImg" src="twitch.png" alt="" class="contactImg"></a>
                         <p>twitchaccount</p>
                     </div>
                     <div class="contact">
-                        <a href=""><img id="YoutubeImg" src="youtube.png" alt="" class="contactImg"></a>
-                        <p>youtubeaccount</p>
+                        <a href="https://www.youtube.com/channel/UC9efAmGsXORXhYCKEhdiKrg"><img id="YoutubeImg" src="youtube.png" alt="" class="contactImg"></a>
+                        <p>Goedies04</p>
                     </div>
                     <div class="contact">
                         <p>
@@ -93,16 +114,30 @@
                         </p>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
 
-
-    <script src="script.js">
-
-    </script>
+        
+    <div id="navigatie-containerButton">
+        <div id="navigatieButton-circle">
+            <div class="navigatieButton" id="about2"><strong><a id="aboutLink2" href="#headline1" style="text-decoration: none;"><span></span>Over mij</a></strong></div>
+            <div class="navigatieButton" id="opleidingen2"><strong><a id="opleidingenLink2" href="#headline2" style="text-decoration: none;"><span></span>Opleidingen</a></strong></div>
+            <div class="navigatieButton" id="projecten2"><strong><a id="projectenLink2" href="#headline3" style="text-decoration: none;"><span></span>Projecten</a></strong></div>
+            <div class="navigatieButton" id="skills2"><strong><a id="skillsLink2" href="#headline4" style="text-decoration: none;"><span></span>Skills</a></strong></div>
+            <div class="navigatieButton" id="werkervaring2"><strong><a id="werkervaringLink2" href="#headline5" style="text-decoration: none;"><span></span>Werkervaring</a></strong></div>
+            <div class="navigatieButton" id="contact2"><strong><a id="contactLink2" href="#headline6" style="text-decoration: none;"><span></span>Contact</a></strong></div>
+        </div>
+    </div>
+    <div id="button-section">
+    <div class="button">
+        <div class="buttonBar buttonBar-1"></div>
+        <div class="buttonBar buttonBar-2"></div>
+        <div class="buttonBar buttonBar-3"></div>
+    </div>
+    
+     
 </body>
-
 </html>
+
+<script src="script.js"></script>

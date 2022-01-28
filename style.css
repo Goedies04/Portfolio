@@ -17,17 +17,78 @@ body{
     position: fixed;
     float: left;
     top: 0px;
-    width: 20vw; 
+    width: 19vw; 
     height: 100vh; 
     background-color:rgb(140,183,127); 
     display: grid; 
     align-items: center; 
     justify-content: center; 
     user-select: none; 
-  } 
-   
+  }
+  .button{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 4vw;
+    height: 7vh;
+    transform: translateX(-20vw);
+  }  
+  .buttonBar{
+     background-color: black;
+    position: absolute;
+    width: 7vw;
+    height: 1vh;
+    border-radius: 5vw;
+  }
+
+  .buttonBar-1{
+    top: 1vh;
+    left: 0.5vw;
+  }  
+  .buttonBar-2{
+    top: 3vh;
+    left: 0.5vw;
+  }  
+  .buttonBar-3{
+    top: 5vh;
+    left: 0.5vw;
+  }
+  #navigatie-containerButton{ 
+    position: fixed;
+    transform: translateX(-50vw);
+    width: 50vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color:rgba(140,183,127,255);
+  }
+
+  #navigatieButton-circle{
+    position: fixed;
+    width: 34vw;
+    left: 12vw;
+    top: 5vh;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10vw;
+    font-size: 3vw;
+    background-color:(140,183,127,255);
+  }
+
+  .navigatieButton{
+    vertical-align: middle;
+    font-size: 1em;
+    padding-left: 0.5vw;
+    height: 8vh;
+    width: 25vw;
+    font-family: bold, Courier, monospace;
+    line-height: 5vh;
+    line-height: 8vh;
+  }
   #navigatie-container{  
-    transform: translateY(-10vh);
     margin: 0em; 
     border: solid 1px black; 
     width: 15vw; 
@@ -42,7 +103,7 @@ body{
    
   .navigatie{ 
     vertical-align: middle; 
-    font-size: 1.5em; 
+    font-size: 1.6vw; 
     padding-left: 0.5vw; 
     height: 5vh; 
     width: 11vw; 
@@ -50,13 +111,23 @@ body{
     font-family: 'Courier New', Courier, monospace; 
     line-height: 5vh; 
   } 
-   
-   
+
+  a{
+    color: rgb(140,183,127); 
+    user-select: none;
+  }
+ 
   .navigatie:hover{ 
     background-color:rgb(140,183,127); 
     border-radius: 80px; 
-    color: black ; 
   } 
+
+
+  .navigatieButton:hover{
+    border-radius: 80px; 
+    background-color:rgb(140,183,127);
+    color: black;
+  }
 
 
 /* ---Header--- */
@@ -66,7 +137,7 @@ body{
     position: relative;
     top: 0px;
     background-color: rgb(170, 170, 170);
-    width: 78.9vw;
+    width: 80.9vw;
     height: 30vh;
     padding: 10px;
 }
@@ -95,8 +166,8 @@ h2{
     position: relative;
     top: 0px;
     background-color: rgb(170, 170, 170);
-    width: 78.9vw;
-    height: 216vh;
+    width: 81vw;
+    height: 298vh;
     padding: 10px;
 }
 .info-box{
@@ -117,13 +188,51 @@ h2{
     margin-left: 10px;
     color: rgb(140,183,127);
 }
+#skill-container{
+  height: 400px;
+  width: 78.9vw;
+  font-size: 30px;
+  float: right;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.Head-container{
+  grid-column: span 2;
+}
+
+.skillName{
+  line-height: 10vh;
+  font-size: 3vw;
+}
+
+.skillBar{
+  transform: translateX(-20vw);
+  border: solid 1px black;
+  margin-top: 4vh;
+  width: 20vw;
+  height: 3vh;
+  border-radius: 5vh;
+}
+
+.skillDone{
+  background-color: green;
+  border-radius: 5vh 5vh 5vh 5vh;
+  height: 3vh;
+  transform: translateX(-0.06vw);
+}
+
+.skillDone-1{
+  width: 20vw;
+  /* border-radius: 5vw; */
+}
 
 /* ---Footer--- */
-#footer-container{
-    height: 55vh;
+#headline6{
+    height: 57vh;
 }
 #contact-container{
-    border: solid 1px;
     height: 400px;
     width: 78.9vw;
     font-size: 30px;
@@ -160,93 +269,4 @@ h2{
     transform: scale(1.2); 
     transition: transform .2s;
   }
-
-  #menu{
-    width: 0px;
-    height: 0px;
-  }
-
-
-
-
-
- /* ---Telefoon--- */
- @media screen and (max-width: 720px){
-
-  #left-screen{
-    width: 15vw;
-    align-items: center; 
-    justify-content: center;
-    float: left;
-  }
-  #menu{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-    transition: duration 1s;
-    justify-self: center;
-  }
-  #menu:active{
-    background-color: gray;
-    
-  }
-  #navigatie-container{
-    visibility: hidden;
-  }
-  .navigatie{
-    visibility: hidden;
-  }
-  #header{
-    width: 85vw;
-    height: 17vh;
-  }
-  #info-container{
-    width: 85vw;
-  }
-  .info-box{
-    width: 70vw;
-  }
-  #profile{
-    width: 125px;
-    height: 125px;
-    align-self: center;
-  }
-  #profile-picture{
-    align-content: center;
-    justify-content: center;
-  }
-  .Headline{
-    font-size: 20px;
-  }
-  }
-  /* ---Tabblad--- */
-  /* -vertical mode- */
-  @media screen and (max-width: 920px){
-    #menu{
-      width: 70px;
-      height: 70px;
-      align-self: center;
-      visibility: hidden;
-  }
-  }
   
-  /* -Landscape mode- */
-  @media screen and (max-width: 1280px){
-    #menu{
-      width: 70px;
-      height: 70px;
-      align-self: center;
-      visibility: hidden;
-  }
-  }
-  
-  /* ---Desktop--- */
-  @media screen and(max-width: 1500px){
-    #menu{
-      width: 10px;
-      height: 10px;
-      align-self: center;
-      visibility: hidden;
-    }
-  }
